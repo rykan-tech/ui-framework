@@ -1,8 +1,9 @@
 /**
- * @class ExampleComponent
+ * @class Theme
  */
 
 import * as React from 'react';
+import { Color } from 'csstype';
 
 import styles from './rwf.css';
 
@@ -244,7 +245,6 @@ import {
 	colors,
 	colors_array
 } from './colours';
-import { Color } from 'csstype';
 
 export {
 	colours,
