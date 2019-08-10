@@ -3,8 +3,9 @@
  */
 import makeTheme from "./make-theme";
 import * as React from "react";
+import styles from '../rwf.css';
 
-class Theme extends React.Component<{ children?: any, className?: string, id?: string, theme: any, style?: React.CSSProperties }> {
+export default class Theme extends React.Component<{ children?: any, className?: string, id?: string, theme: any, style?: React.CSSProperties }> {
 	render() {
 		const {
 			children,
@@ -27,12 +28,11 @@ class Theme extends React.Component<{ children?: any, className?: string, id?: s
 					>
 					{children}
 				</Parallax> */}
-			< div className = {`${styles[`theme-${theme.theme}`]} rwf-theme-root ${styles.theme}${className ? ` ${className}` : ""}`
-	} id = { id } style = { style || { background: theme.background.high }
-}>
-	{ children }
-	< /div>
-	< /ThemeContext.Provider>
+			<div className={`${styles[`theme-${theme.theme}`]} rwf-theme-root ${styles.theme}${className ? ` ${className}` : ""}`
+			} id = { id } style = { style || { background: theme.background.high }}>
+				{ children }
+			</div>
+		</ThemeContext.Provider>
 		)
 	}
 }
