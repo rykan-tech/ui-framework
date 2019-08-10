@@ -2,10 +2,6 @@
  * @class ExampleComponent
  */
 
-import * as React from 'react';
-
-import styles from './rwf.css';
-
 import { initializeIcons } from '@uifabric/icons';
 
 import Navbar from './navigation/topnav/navbar';
