@@ -6,6 +6,8 @@ import * as React from 'react';
 
 import styles from './rwf.css';
 
+import { initializeIcons } from '@uifabric/icons';
+
 import Navbar from './navigation/topnav/navbar';
 import NavItem from './navigation/topnav/navitem';
 import NavButton from './navigation/topnav/navbutton';
@@ -16,9 +18,23 @@ export {
 	NavButton,
 };
 
+import { styles as typography } from './typography/styles';
+
+export {
+	typography
+};
+
+import Sidebar from './navigation/sidebar';
+import MenuButton from './navigation/sidebar/MenuButton';
+
+export {
+	Sidebar,
+	MenuButton,
+};
+
 interface ThemeProps {
 	accent: Color,
-	theme: "dark" | "light"
+	theme: string
 }
 
 const makeTheme = function (theme: ThemeProps) {
@@ -178,7 +194,7 @@ const makeTheme = function (theme: ThemeProps) {
 
 //const ThemeContext = React.createContext(makeTheme({accent: "#0078D8", theme: "dark"}));
 
-class Theme extends React.Component<{children: any, className: string, id: string, theme: any, style: React.StyleHTMLAttributes<HTMLDivElement> }> {
+class Theme extends React.Component<{children?: any, className?: string, id?: string, theme: any, style?: React.CSSProperties }> {
 	render() {
 		const {
 			children,
@@ -188,11 +204,11 @@ class Theme extends React.Component<{children: any, className: string, id: strin
 			style,
 		} = this.props
 
-		//const ThemeContext = React.createContext(makeTheme(theme));
+		const ThemeContext = React.createContext(makeTheme(theme));
 
 		return (
-			/* <ThemeContext.Provider value={makeTheme(theme)}> */
-				/* <Parallax contentClassName={`${styles[`theme-${theme.theme || "dark"}`]} rwf-theme-root ${styles.theme}`} //style={{ backgroundImage: backgroundImg }} styleOuter={{ backgroundImage: backgroundImg }}
+			<ThemeContext.Provider value={makeTheme(theme)}>
+				{/* <Parallax contentClassName={`${styles[`theme-${theme.theme || "dark"}`]} rwf-theme-root ${styles.theme}`} //style={{ backgroundImage: backgroundImg }} styleOuter={{ backgroundImage: backgroundImg }}
 					bgImage={background}
 					strength={1000}
 					//offsetYMax={100}
@@ -200,11 +216,11 @@ class Theme extends React.Component<{children: any, className: string, id: strin
 					//slowerScrollRate
 					>
 					{children}
-				</Parallax> */
+				</Parallax> */}
 				<div className={`${styles[`theme-${theme.theme}`]} rwf-theme-root ${styles.theme}${className ? ` ${className}` : ""}`} id={id} style={style || { background: theme.background.high }}>
 					{children}
 				</div>
-			/* </ThemeContext.Provider> */
+			</ThemeContext.Provider>
 		)
 	}
 }
@@ -228,3 +244,5 @@ export {
 	colors,
 	colors_array
 };
+
+initializeIcons();

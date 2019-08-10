@@ -1,0 +1,54 @@
+.sidebar {
+	display: flex;
+	flex-direction: column;
+	box-sizing: border-box;
+	height: 100vh;
+	transition-duration: 300ms;
+}
+
+.menu_button {
+	height: 32;
+	display: flex;
+	appearance: none;
+	outline: 0;
+	padding: 4px;
+	font-size: 16px;
+	margin-left: 16px;
+	margin-right: 16px;
+	background: none;
+	color: inherit;
+	box-sizing: border-box;
+	border: 2px solid transparent;
+	transition-duration: 200ms;
+}
+
+.menu_button:hover {
+	box-shadow: 0 0 2px, 0 0 2px inset;
+	border: 2px solid;
+}
+
+.menu_button:first-child {
+	margin-top: 16px;
+}
+
+.menu_button:last-child {
+	margin-bottom: 16px;
+}
+
+.menu_button_icon {
+	font-size: 16px;
+	width: 16px;
+	height: 16px;
+	margin: auto 8px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.menu_button_label {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	margin-left: 8px;
+	margin-right: 8px;
+}

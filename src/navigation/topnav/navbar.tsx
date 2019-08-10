@@ -2,7 +2,7 @@ import * as React from 'react';
 
 import styles from './rwf.css';
 
-export default class Navbar extends React.Component<{logo?: string, style?: React.StyleHTMLAttributes<HTMLDivElement>, outerStyle?: React.StyleHTMLAttributes<HTMLDivElement>, fixed?: boolean}> {
+export default class Navbar extends React.Component<{logo?: string, style?: React.CSSProperties, outerStyle?: React.CSSProperties, fixed?: boolean}> {
 	render() {
 		const {
 			children,
