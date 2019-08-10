@@ -2,37 +2,37 @@ const typeStyles = {
 	Heading: {
 		fontWeight: 300,
 		fontSize: 46,
-		lineHeight: 56
+		lineHeight: "56px"
 	},
 	
 	Subheading: {
 		fontWeight: 300,
 		fontSize: 34,
-		lineHeight: 40
+		lineHeight: "40px"
 	},
 
 	Title: {
 		fontWeight: 300,
 		fontSize: 24,
-		lineHeight: 24
+		lineHeight: "24px"
 	},
 
 	Subtitle: {
 		fontWeight: 300,
 		fontSize: 20,
-		lineHeight: 24
+		lineHeight: "24px"
 	},
 
 	SubtitleAlt: {
 		fontWeight: 300,
 		fontSize: 18,
-		lineHeight: 20
+		lineHeight: "20px"
 	},
 
 	Base: {
 		fontWeight: 300,
 		fontSize: 16,
-		lineHeight: 20
+		lineHeight: "20px"
 	},
 
 	Paragraph: {
