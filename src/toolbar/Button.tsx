@@ -4,7 +4,7 @@ import menuStyles from '../navigation/sidebar/r_sidebar.css';
 
 import styles from './r_toolbar.css';
 
-import { Icon } from 'office-ui-fabric-react/lib/Icon';
+import { Icon } from 'office-ui-fabric-react';
 
 const ToolbarButton: React.FunctionComponent<{ icon?: string, children: string, onClick?: React.MouseEventHandler }> = (props) => {
 	return (
