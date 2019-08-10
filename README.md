@@ -31,4 +31,4 @@ class Example extends React.Component {
 
 ## License
 
-LGPLv2 © [iliketeaalot](https://github.com/iliketeaalot)
+LGPLv3 © [iliketeaalot](https://github.com/iliketeaalot)
