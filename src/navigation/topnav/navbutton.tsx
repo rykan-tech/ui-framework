@@ -1,10 +1,10 @@
 import * as React from 'react';
 
-import { styles as typeStyles } from '../typography/styles';
+import { styles as typeStyles } from '../../typography/styles';
 
 import styles from './rwf.css';
 
-export default class Navbar extends React.Component<{onClick?: React.MouseEventHandler<HTMLDivElement>, id?: string, right?: boolean}> {
+export default class NavButton extends React.Component<{onClick?: React.MouseEventHandler<HTMLDivElement>, id?: string, right?: boolean}> {
 	render() {
 		const {
 			children,

@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import { styles as typeStyles } from '../typography/styles';
+import { styles as typeStyles } from '../../typography/styles';
 
 import styles from './rwf.css';
 

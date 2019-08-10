@@ -6,9 +6,9 @@ import * as React from 'react';
 
 import styles from './rwf.css';
 
-import Navbar from './navigation/navbar.jsx';
-import NavItem from './navigation/navitem.jsx';
-import NavButton from './navigation/navbutton.jsx';
+import Navbar from './navigation/topnav/navbar';
+import NavItem from './navigation/topnav/navitem';
+import NavButton from './navigation/topnav/navbutton';
 
 export {
 	Navbar,
