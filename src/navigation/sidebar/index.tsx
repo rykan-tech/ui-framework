@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import styles from './rwf_sidebar.css';
+import styles from './r_sidebar.css';
 
 export default class Sidebar extends React.Component<{compact?: boolean, style?: React.CSSProperties, children?: any}> {
 	render() {
@@ -15,7 +15,7 @@ export default class Sidebar extends React.Component<{compact?: boolean, style?:
 		if (compact) width = 240;
 
 		return (
-			<div className={styles.sidebar} id="file_menu" style={{ ...style, width: width }}>
+			<div className={styles.sidebar} style={{ ...style, width: width }}>
 				{children}
 			</div>
 		)

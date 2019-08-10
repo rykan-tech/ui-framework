@@ -23,8 +23,7 @@
 }
 
 .menu_button:hover {
-	box-shadow: 0 0 2px, 0 0 2px inset;
-	border: 2px solid;
+	text-shadow: 0 0 5px;
 }
 
 .menu_button:first-child {

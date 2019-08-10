@@ -32,6 +32,14 @@ export {
 	MenuButton,
 };
 
+import Toolbar from './toolbar';
+import ToolbarButton from './toolbar/Button';
+
+export {
+	Toolbar,
+	ToolbarButton,
+};
+
 interface ThemeProps {
 	accent: Color,
 	theme: string

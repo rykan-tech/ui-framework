@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import styles from './rwf_sidebar.css';
+import styles from './r_sidebar.css';
 
 import { Icon } from 'office-ui-fabric-react';
 
