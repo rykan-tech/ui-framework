@@ -235,7 +235,7 @@ import {
 	colours_array,
 	colors,
 	colors_array
-} from './colours.js';
+} from './colours';
 import { Color } from 'csstype';
 
 export {

@@ -2,7 +2,7 @@ import * as React from 'react';
 
 import styles from './rwf_sidebar.css';
 
-import { Icon } from 'office-ui-fabric-react/lib/Icon';
+import { Icon } from 'office-ui-fabric-react';
 
 const MenuButton: React.FunctionComponent<{ icon?: string, children: string, onClick: React.MouseEventHandler }> = (props) => {
 	return (
