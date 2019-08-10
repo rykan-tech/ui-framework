@@ -1,0 +1,91 @@
+.navbar {
+	display: flex;
+	justify-content: center;
+	z-index: 1000;
+}
+
+.rykan {
+	height: 32px;
+	display: flex;
+	margin: auto 1rem;
+	filter: drop-shadow(0 -0.75px rgba(0, 0, 0, 0.9)) drop-shadow(0px 0.5px 0px rgba(255, 255, 255, 0.2));
+}
+
+.navbar-inner {
+	background: linear-gradient(to bottom, rgba(125,126,125,0.6) 0%,rgba(14,14,14,0.6) 100%);
+	width: 100%;
+	height: 42px;
+	/* border-radius: 4px; */
+	/* max-width: 1600px; */
+	margin: 2em 4em;
+	margin: 0;
+	/* max-width: 1024px; */
+	display: flex;
+	padding: 0 1rem;
+	box-sizing: border-box;
+	box-shadow: 0 3px 15px 0px rgba(0, 0, 0, 0.4), 0 -3px 15px 0px rgba(0, 0, 0, 0.4);
+	backdrop-filter: blur(10px);
+	-webkit-backdrop-filter: blur(10px);
+}
+
+.navitem {
+	display: flex;
+	padding: 0 16px;
+	height: 42px;
+	cursor: pointer;
+	color: inherit;
+	text-decoration: none;
+	user-select: none;
+	-moz-user-select: none;
+	vertical-align: middle;
+	flex-direction: column;
+	align-content: center;
+	justify-content: center;
+	transition: 0.2s;
+	white-space: nowrap;
+	flex: 0 0 auto;
+	text-shadow: 0 -0.75px rgba(0, 0, 0, 0.9), 0px 0.5px 0px rgba(255, 255, 255, 0.2);
+}
+
+.navitem:hover {
+	text-shadow: 0 0 3px;
+}
+
+.navitem:active {
+	/*background: linear-gradient(to bottom, rgba(69,72,77,0.8) 0%,rgba(0,0,0,0.8) 100%);*/
+	box-shadow: inset 0 0 1px 1px /* rgba(14,14,14,0.8) */ #000000;
+	/* background: rgba(0, 0, 0, 0.2); */
+	/*filter: brightness(0.75) saturate(0.8) opacity(0.8);*/
+}
+
+.navitem > span {
+	margin: auto 0;
+	display: flex;
+}
+/* 
+.navitem > span > * {
+	display: inline-flex;
+	margin: auto 0 auto 0.425rem;
+}
+ */
+@media (max-width: 540px) {
+	.navbar {
+		/* background: linear-gradient(to bottom, rgba(125,126,125,0.9) 0%,rgba(14,14,14,0.9) 100%); */
+		overflow-x: scroll;
+		overflow-y: visible;
+		position: fixed;
+		top: 0;
+		/* z-index: 10000000000000; */
+		/* transform: translateZ(-5000px); */
+		width: 100%;
+	}
+
+	.navbar-inner {
+		z-index: 10000000000000;
+		transform: translateZ(-5000px);
+	}
+
+	.rykan {
+		display: none;
+	}
+}
