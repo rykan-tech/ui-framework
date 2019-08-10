@@ -226,7 +226,7 @@ class Theme extends React.Component<{children?: any, className?: string, id?: st
 					>
 					{children}
 				</Parallax> */}
-				<div className={`${styles[`theme-${theme.theme}`]} rwf-theme-root ${styles.theme}${className ? ` ${className}` : ""}`} id={id} style={style || { background: theme.background.high }}>
+				<div className={`${styles[`theme-${theme.theme}`]} rwf-theme-root ${styles.theme} ${className ? ` ${className}` : ""}`} id={id} style={style || { background: theme.background.high }}>
 					{children}
 				</div>
 			</ThemeContext.Provider>
