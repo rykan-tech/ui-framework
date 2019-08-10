@@ -9,22 +9,32 @@ interface ThemeProps {
 	theme: string;
 }
 
-export default function makeTheme(theme: ThemeProps) {
-	function hexToRGB(hex: Color | null, alpha?: number | null) {
-		if (!hex) {
-			return null;
-		}
-		var r = parseInt(hex.slice(1, 3), 16),
-			g = parseInt(hex.slice(3, 5), 16),
-			b = parseInt(hex.slice(5, 7), 16);
-
-		if (alpha) {
-			return "rgba(" + r + ", " + g + ", " + b + ", " + alpha + ")";
-		} else {
-			return "rgb(" + r + ", " + g + ", " + b + ")";
-		}
+function hexToRGB(hex: Color | null, alpha?: number | null): string {
+	if (!hex) {
+		return null;
 	}
+	let red = parseInt(hex.slice(1, 3), 16),
+		green = parseInt(hex.slice(3, 5), 16),
+		blue = parseInt(hex.slice(5, 7), 16);
 
+	if (alpha) {
+		return "rgba(" + red + ", " + green + ", " + blue + ", " + alpha + ")";
+	} else {
+		return "rgb(" + red + ", " + green + ", " + blue + ")";
+	}
+}
+
+export default function makeTheme(theme: ThemeProps) {
+
+	/**
+	 * Darkens and lightens accent colours,
+	 * or blends with anopther
+	 * From https://stackoverflow.com/questions/5560248/programmatically-lighten-or-darken-a-hex-color-or-rgb-and-blend-colors/13542669#13542669
+	 * @param p The amount to darken (-ve) or lighten the colour
+	 * @param c0 The accent colour
+	 * @param c1 A colour to blend with
+	 * @param l 
+	 */
 	const pSBC = (p: number, c0: Color, c1?: Color, l?: any) => {
 		let r, g, b, a, P, f, t, h, i = parseInt, m = Math.round, z = typeof (c1) == "string";
 		if (typeof (p) != "number" || p < -1 || p > 1 || typeof (c0) != "string" || (c0[0] != 'r' && c0[0] != '#') || (c1 && !z)) return null;
