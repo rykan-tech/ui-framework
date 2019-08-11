@@ -3,7 +3,9 @@
 	flex-direction: column;
 	box-sizing: border-box;
 	height: 100vh;
-	transition-duration: 300ms;
+	max-height: 100vw;
+	overflow-y: auto;
+	flex-shrink: 0;
 }
 
 .menu_button {
@@ -26,11 +28,11 @@
 	text-shadow: 0 0 5px;
 }
 
-.menu_button:first-child {
+.menu_button:first-of-type {
 	margin-top: 16px;
 }
 
-.menu_button:last-child {
+.menu_button:last-of-type {
 	margin-bottom: 16px;
 }
 
@@ -50,4 +52,18 @@
 	justify-content: center;
 	margin-left: 8px;
 	margin-right: 8px;
+}
+
+@media (max-width: 540px) {
+	.sidebar {
+		position: fixed;
+		left: 0;
+		top: 0;
+		bottom: 0;
+		transform: translateX(-100%);
+	}
+
+	.sidebar_visible {
+		transform: none;
+	}
 }

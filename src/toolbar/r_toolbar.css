@@ -1,8 +1,17 @@
+.toolbar_container {
+	width: 100%;
+	height: 40px;
+	display: flex;
+	flex-shrink: 1;
+	overflow-x: auto;
+	overflow-y: visible;
+}
+
 .toolbar {
 	height: 40px;
-	width: 100%;
 	margin: 0;
 	display: flex;
+	flex-grow: 1;
 }
 
 .button {
@@ -17,6 +26,7 @@
 	box-sizing: border-box;
 	border: 0;
 	transition-duration: 200ms;
+	white-space: nowrap;
 }
 
 .button:hover {
