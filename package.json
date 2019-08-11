@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "description": "",
   "author": "James Hart",
-  "license": "LGPL-2.1-or-later",
+  "license": "LGPL-3.0-or-later",
   "repository": "rykan-tech/ui",
   "main": "dist/index.js",
   "module": "dist/index.es.js",
