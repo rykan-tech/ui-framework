@@ -10,7 +10,11 @@
 ## Install
 
 ```bash
-npm install --save @rykan/ui
+npm install --save @rykan/ui-framework
+```
+
+```bash
+yarn add @rykan/ui-framework
 ```
 
 ## Usage
@@ -18,14 +22,25 @@ npm install --save @rykan/ui
 ```tsx
 import * as React from 'react'
 
-import MyComponent from '@rykan/ui'
+import {
+	Theme,
+	makeTheme
+} from '@rykan/ui-framework';
+
+// ...
+
+const theme = makeTheme({theme: "dark", accent: "#0078D7"});
+
+// ...
 
 class Example extends React.Component {
-  render () {
-    return (
-      <MyComponent />
-    )
-  }
+	render () {
+		return (
+			<Theme theme={theme}>
+				// Stuff!
+			</Theme>
+		)
+	}
 }
 ```
 
