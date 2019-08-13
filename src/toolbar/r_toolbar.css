@@ -4,7 +4,7 @@
 	display: flex;
 	flex-shrink: 1;
 	overflow-x: auto;
-	overflow-y: visible;
+	overflow-y: hidden;
 }
 
 .toolbar {
