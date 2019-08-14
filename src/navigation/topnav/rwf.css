@@ -45,7 +45,7 @@
 }
 
 .navitem:hover {
-	text-shadow: 0 0 3px;
+	text-shadow: 0 0 3px #ffffff;
 }
 
 .navitem:active {
