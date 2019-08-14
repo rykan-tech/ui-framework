@@ -1,8 +1,11 @@
 //pSBC - Shade Blend Convert - Version 4.0 - 02/18/2019
+
+let pSBCr;
+
 const pSBC=(p,c0,c1,l)=>{
 	let r,g,b,P,f,t,h,i=parseInt,m=Math.round,a=typeof(c1)=="string";
 	if(typeof(p)!="number"||p<-1||p>1||typeof(c0)!="string"||(c0[0]!='r'&&c0[0]!='#')||(c1&&!a))return null;
-	if(!this.pSBCr)this.pSBCr=(d)=>{
+	if(!pSBCr)pSBCr=(d)=>{
 		let n=d.length,x={};
 		if(n>9){
 			[r,g,b,a]=d=d.split(","),n=d.length;

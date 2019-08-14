@@ -39,3 +39,5 @@ const pSBC = (p: number, c0: Color, c1?: Color, l?: any) => {
 	if (h) return "rgb" + (f ? "a(" : "(") + r + "," + g + "," + b + (f ? "," + m(a * 1000) / 1000 : "") + ")";
 	else return "#" + (4294967296 + r * 16777216 + g * 65536 + b * 256 + (f ? m(a * 255) : 0)).toString(16).slice(1, f ? undefined : -2)
 }
+
+export default pSBC
