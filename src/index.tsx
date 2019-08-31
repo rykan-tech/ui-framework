@@ -24,6 +24,12 @@ export {
 	typography
 };
 
+import Button from './controls/Button';
+
+export {
+	Button
+};
+
 import Sidebar from './navigation/sidebar';
 import MenuButton from './navigation/sidebar/MenuButton';
 
@@ -67,7 +73,7 @@ class Theme extends React.Component<{children?: any, className?: string, id?: st
 					>
 					{children}
 				</Parallax> */}
-				<div className={`${styles[`theme-${theme.theme}`]} rwf-theme-root ${styles.theme} ${className ? ` ${className}` : ""}`} id={id} style={style || { background: theme.background.high }}>
+				<div className={`${styles[`theme-${theme.theme}`]} rwf-theme-root ${styles.theme} ${className ? ` ${className}` : ""}`} id={id} style={{ background: theme.background.high, ...style }}>
 					{children}
 				</div>
 			</ThemeContext.Provider>

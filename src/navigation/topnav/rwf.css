@@ -18,6 +18,7 @@
 	margin: 2em 4em;
 	margin: 0;
 	display: flex;
+	flex-grow: 1;
 	padding: 0 1rem;
 	box-sizing: border-box;
 	box-shadow: 0 3px 15px 0px rgba(0, 0, 0, 0.4), 0 -3px 15px 0px rgba(0, 0, 0, 0.4);
