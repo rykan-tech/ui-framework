@@ -74,13 +74,13 @@ const makeTheme = function (theme: ThemeProps) {
 			accentMedium: hexToRGB(theme.accent, 0.6),
 			accentHigh: hexToRGB(theme.accent, 0.7),
 
-			accentDark: hexToRGB(pSBC(-0.10, theme.accent)),
-			accentDarker: hexToRGB(pSBC(-0.20, theme.accent)),
-			accentDarkest: hexToRGB(pSBC(-0.30, theme.accent)),
+			accentDark: hexToRGB(pSBC(-0.10, theme.accent)) || theme.accent,
+			accentDarker: hexToRGB(pSBC(-0.20, theme.accent)) || theme.accent,
+			accentDarkest: hexToRGB(pSBC(-0.30, theme.accent)) || theme.accent,
 
-			accentLight: hexToRGB(pSBC(0.10, theme.accent)),
-			accentLighter: hexToRGB(pSBC(0.20, theme.accent)),
-			accentLightest: hexToRGB(pSBC(0.30, theme.accent)),
+			accentLight: hexToRGB(pSBC(0.10, theme.accent)) || theme.accent,
+			accentLighter: hexToRGB(pSBC(0.20, theme.accent)) || theme.accent,
+			accentLightest: hexToRGB(pSBC(0.30, theme.accent)) || theme.accent,
 
 			chromeLow: "#171717",
 			chromeMediumLow: "#2B2B2B",
@@ -125,13 +125,13 @@ const makeTheme = function (theme: ThemeProps) {
 			accentMedium: hexToRGB(theme.accent, 0.6),
 			accentHigh: hexToRGB(theme.accent, 0.7),
 
-			accentDark: hexToRGB(pSBC(-0.10, theme.accent)),
-			accentDarker: hexToRGB(pSBC(-0.20, theme.accent)),
-			accentDarkest: hexToRGB(pSBC(-0.30, theme.accent)),
+			accentDark: hexToRGB(pSBC(-0.10, theme.accent)) || theme.accent,
+			accentDarker: hexToRGB(pSBC(-0.20, theme.accent)) || theme.accent,
+			accentDarkest: hexToRGB(pSBC(-0.30, theme.accent)) || theme.accent,
 
-			accentLight: hexToRGB(pSBC(0.10, theme.accent)),
-			accentLighter: hexToRGB(pSBC(0.20, theme.accent)),
-			accentLightest: hexToRGB(pSBC(0.30, theme.accent)),
+			accentLight: hexToRGB(pSBC(0.10, theme.accent)) || theme.accent,
+			accentLighter: hexToRGB(pSBC(0.20, theme.accent)) || theme.accent,
+			accentLightest: hexToRGB(pSBC(0.30, theme.accent)) || theme.accent,
 
 			chromeLow: "#171717",
 			chromeMediumLow: "#2B2B2B",
