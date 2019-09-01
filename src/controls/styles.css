@@ -3,26 +3,30 @@
 	-moz-appearance: none;
 	border: 0;
 	background: none;
+	background-size: 200%;
+	background-position: right 0;
 	color: inherit;
-	display: flex;
+	display: inline-flex;
 	font-size: 1em;
 	line-height: 1em;
 	outline: 0;
 	padding: 0.5em;
 	height: 2em;
+	min-width: 2em;
 	box-sizing: border-box;
-	box-shadow: 0 0 6px 2px #000000;
+	box-shadow: 0 0 8px 2px #000000;
 	white-space: nowrap;
-	transition-duration: 200ms;
+	transition-duration: 300ms;
 }
 
 .button:hover {
-	box-shadow: 0 0 10px 5px #000000;
+	box-shadow: 0 0 16px 4px #000000;
 	transform: scale(1.0625);
+	background-position: 0 0;
 }
 
 .button:active {
-	box-shadow: 0 0 5px 2px #000000;
+	box-shadow: 0 0 4px 2px #000000;
 	transform: scale(0.9375);
 }
 
