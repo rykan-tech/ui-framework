@@ -900,6 +900,16 @@
     "@uifabric/utilities" "^7.0.8"
     tslib "^1.7.1"
 
+"@uifabric/foundation@^7.3.0":
+  version "7.3.0"
+  resolved "https://registry.yarnpkg.com/@uifabric/foundation/-/foundation-7.3.0.tgz#eb3c2e0c31efc84d0704afd446a5b5511fd78961"
+  integrity sha512-UBLwLH1Ljry+GTppbTPlaZILtYFrpig2rq9+8JwypKVvpfIgOF07o/w2RA3j+KAN1RHRFdEso7mnWWfBEe9OFA==
+  dependencies:
+    "@uifabric/set-version" "^7.0.2"
+    "@uifabric/styling" "^7.6.1"
+    "@uifabric/utilities" "^7.0.8"
+    tslib "^1.7.1"
+
 "@uifabric/icons@^7.1.2":
   version "7.1.2"
   resolved "https://registry.yarnpkg.com/@uifabric/icons/-/icons-7.1.2.tgz#ad501af50835494d78a594cbba83eb22e19f4017"
@@ -7174,7 +7184,7 @@ obuf@^1.0.0, obuf@^1.1.1:
   resolved "https://registry.yarnpkg.com/obuf/-/obuf-1.1.2.tgz#09bea3343d41859ebd446292d11c9d4db619084e"
   integrity sha512-PX1wu0AmAdPqOL1mWhqmlOd8kOIZQwGZw6rh7uby9fTc5lhaOWFLX3I6R1hrF9k3zUY40e6igsLGkDXK92LJNg==
 
-office-ui-fabric-react@^7.22.1, office-ui-fabric-react@^7.27.1:
+office-ui-fabric-react@^7.27.1:
   version "7.28.3"
   resolved "https://registry.yarnpkg.com/office-ui-fabric-react/-/office-ui-fabric-react-7.28.3.tgz#2e18a15eb87402af837337e3513c76d60de0cb45"
   integrity sha512-uU75fGgRFdXpV1b4u+aMnQxmtyxo3TJxabWosU/Ou6iDs39K+H2jtwnNOfXAD/VTOuV0ffWfWtUuc38GSki5FA==
@@ -7182,6 +7192,22 @@ office-ui-fabric-react@^7.22.1, office-ui-fabric-react@^7.27.1:
     "@microsoft/load-themed-styles" "^1.7.13"
     "@uifabric/example-data" "^7.0.1"
     "@uifabric/foundation" "^7.2.0"
+    "@uifabric/icons" "^7.1.2"
+    "@uifabric/merge-styles" "^7.5.0"
+    "@uifabric/set-version" "^7.0.2"
+    "@uifabric/styling" "^7.6.1"
+    "@uifabric/utilities" "^7.0.8"
+    prop-types "^15.5.10"
+    tslib "^1.7.1"
+
+office-ui-fabric-react@^7.29.0:
+  version "7.29.0"
+  resolved "https://registry.yarnpkg.com/office-ui-fabric-react/-/office-ui-fabric-react-7.29.0.tgz#d8e481755511d7bae15597b94b47260b3f0f9272"
+  integrity sha512-GIn296v5jjBkkIOC11s1tCgib+Vev49BRYyT0fLQesBURR0/vC/CQyvEdWMrNpwLqa9f5ktDAcErBwIVoVQtCA==
+  dependencies:
+    "@microsoft/load-themed-styles" "^1.7.13"
+    "@uifabric/example-data" "^7.0.1"
+    "@uifabric/foundation" "^7.3.0"
     "@uifabric/icons" "^7.1.2"
     "@uifabric/merge-styles" "^7.5.0"
     "@uifabric/set-version" "^7.0.2"

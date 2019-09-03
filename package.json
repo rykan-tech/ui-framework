@@ -23,7 +23,7 @@
   },
   "dependencies": {
     "@uifabric/fluent-theme": "^7.1.0",
-    "office-ui-fabric-react": "^7.22.1"
+    "office-ui-fabric-react": "^7.29.0"
   },
   "peerDependencies": {
     "prop-types": "^15.5.4",
