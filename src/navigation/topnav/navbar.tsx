@@ -18,8 +18,8 @@ export default class Navbar extends React.Component<{logo?: string, style?: Reac
 				{(theme) => {
 					return (
 						<div className={styles.navbar} style={outerStyle}>
-							<div className={styles["navbar-inner"]} style={{ background: theme.altHigh, ...style }}>
-								<img className={styles.rykan} src={logo} />
+							<div className={styles["navbar-inner"]} style={{ background: theme.altMediumHigh, ...style }}>
+								<img className={styles.rykan} alt="Logo" src={logo} />
 								{children}
 							</div>
 						</div>
