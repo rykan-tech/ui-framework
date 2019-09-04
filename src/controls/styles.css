@@ -13,20 +13,21 @@
 	padding: 0.5em;
 	height: 2em;
 	min-width: 2em;
+	margin: 0.25em;
 	box-sizing: border-box;
-	box-shadow: 0 0 8px 2px #000000;
+	box-shadow: 0 4px 12px #000000;
 	white-space: nowrap;
-	transition-duration: 300ms;
+	transition-duration: 200ms;
 }
 
 .button:hover {
-	box-shadow: 0 0 16px 4px #000000;
+	box-shadow: 0 8px 20px #000000;
 	transform: scale(1.0625);
 	background-position: 0 0;
 }
 
 .button:active {
-	box-shadow: 0 0 4px 2px #000000;
+	box-shadow: 0 2px 6px #000000;
 	transform: scale(0.9375);
 }
 
