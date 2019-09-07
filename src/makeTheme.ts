@@ -6,10 +6,7 @@ interface ThemeProps {
 }
 
 const makeTheme = function (theme: ThemeProps) {
-	function hexToRGB(hex: Color | null, alpha?: number | null) {
-		if (!hex) {
-			return null;
-		}
+	function hexToRGB(hex: Color, alpha?: number | null) {
 		var r = parseInt(hex.slice(1, 3), 16),
 			g = parseInt(hex.slice(3, 5), 16),
 			b = parseInt(hex.slice(5, 7), 16);
@@ -23,16 +20,16 @@ const makeTheme = function (theme: ThemeProps) {
 
 	const pSBC = (p: number, c0: Color, c1?: Color, l?: any) => {
 		let r, g, b, a, P, f, t, h, i = parseInt, m = Math.round, z = typeof (c1) == "string";
-		if (typeof (p) != "number" || p < -1 || p > 1 || typeof (c0) != "string" || (c0[0] != 'r' && c0[0] != '#') || (c1 && !z)) return null;
+		if (typeof (p) != "number" || p < -1 || p > 1 || typeof (c0) != "string" || (c0[0] != 'r' && c0[0] != '#') || (c1 && !z)) return c0; // Typescript pain...
 		const pSBCr = (d: any) => {
 			let n = d.length, x = {};
 			if (n > 9) {
 				[r, g, b, a] = d = d.split(","), n = d.length;
-				if (n < 3 || n > 4) return null;
+				if (n < 3 || n > 4) return c0; // Typescript pain...
 				/// @ts-ignore
 				x.r = i(r[3] == "a" ? r.slice(5) : r.slice(4)), x.g = i(g), x.b = i(b), x.a = a ? parseFloat(a) : -1
 			} else {
-				if (n == 8 || n == 6 || n < 4) return null;
+				if (n == 8 || n == 6 || n < 4) return c0; // Typescript pain...
 				if (n < 6) d = "#" + d[1] + d[1] + d[2] + d[2] + d[3] + d[3] + (n > 4 ? d[4] + d[4] : "");
 				d = i(d.slice(1), 16);
 				/// @ts-ignore
@@ -43,7 +40,7 @@ const makeTheme = function (theme: ThemeProps) {
 		};
 		/// @ts-ignore
 		h = c0.length > 9, h = a ? c1.length > 9 ? true : c1 == "c" ? !h : false : h, f = pSBCr(c0), P = p < 0, t = c1 && c1 != "c" ? pSBCr(c1) : P ? { r: 0, g: 0, b: 0, a: -1 } : { r: 255, g: 255, b: 255, a: -1 }, p = P ? p * -1 : p, P = 1 - p;
-		if (!f || !t) return null;
+		if (!f || !t) return c0; // Typescript pain...
 		/// @ts-ignore
 		if (l) r = m(P * f.r + p * t.r), g = m(P * f.g + p * t.g), b = m(P * f.b + p * t.b);
 		/// @ts-ignore
