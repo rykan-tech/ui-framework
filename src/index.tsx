@@ -24,6 +24,18 @@ export {
 	typography
 };
 
+import Button from './controls/Button';
+
+export {
+	Button
+};
+
+import Line from './decor/Line';
+
+export {
+	Line
+};
+
 import Sidebar from './navigation/sidebar';
 import MenuButton from './navigation/sidebar/MenuButton';
 
@@ -41,8 +53,7 @@ export {
 };
 
 import makeTheme from './makeTheme';
-
-//const ThemeContext = React.createContext(makeTheme({accent: "#0078D8", theme: "dark"}));
+import ThemeContext from './ThemeContext';
 
 class Theme extends React.Component<{children?: any, className?: string, id?: string, theme: any, style?: React.CSSProperties }> {
 	render() {
@@ -52,9 +63,7 @@ class Theme extends React.Component<{children?: any, className?: string, id?: st
 			id,
 			theme,
 			style,
-		} = this.props
-
-		const ThemeContext = React.createContext(makeTheme(theme));
+		} = this.props;
 
 		return (
 			<ThemeContext.Provider value={makeTheme(theme)}>
@@ -67,7 +76,7 @@ class Theme extends React.Component<{children?: any, className?: string, id?: st
 					>
 					{children}
 				</Parallax> */}
-				<div className={`${styles[`theme-${theme.theme}`]} rwf-theme-root ${styles.theme} ${className ? ` ${className}` : ""}`} id={id} style={style || { background: theme.background.high }}>
+				<div className={`${styles[`theme-${theme.theme}`]} rwf-theme-root ${styles.theme} ${className ? ` ${className}` : ""}`} id={id} style={{ background: theme.background.high, ...style }}>
 					{children}
 				</div>
 			</ThemeContext.Provider>
@@ -78,6 +87,7 @@ class Theme extends React.Component<{children?: any, className?: string, id?: st
 export {
 	Theme,
 	makeTheme,
+	ThemeContext,
 };
 
 import {
