@@ -3,7 +3,7 @@
 	flex-direction: column;
 	box-sizing: border-box;
 	height: 100vh;
-	max-height: 100vw;
+	max-height: 100vh;
 	overflow-y: auto;
 	flex-shrink: 0;
 }
@@ -67,9 +67,12 @@
 		top: 0;
 		bottom: 0;
 		transform: translateX(-100%);
+		z-index: 50;
 	}
 
-	.sidebar_visible {
-		transform: none;
+	.sidebar::backdrop {
+		background: rgba(0, 0, 0, 0.4);
+		backdrop-filter: blur(15px);
+		-webkit-backdrop-filter: blur(15px);
 	}
 }
