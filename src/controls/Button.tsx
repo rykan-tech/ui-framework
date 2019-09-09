@@ -23,7 +23,7 @@ const Button: React.FunctionComponent<{
 		<ThemeContext.Consumer>
 			{(theme) => {
 				return (
-					<button style={{ transitionTimingFunction: MotionTimings.standard, color: theme.accent, backgroundImage: props.transparent ? "none" : `linear-gradient(to right, ${theme.accentLighter} 50%, ${theme.accentDarkest} 100%)`, border: props.transparent ? "2px solid " + theme.accentLight : "", ...props.style }} onClick={props.onClick} className={styles.button} aria-label={props.label}>
+					<button style={{ transitionTimingFunction: MotionTimings.standard, color: theme.accent, backgroundImage: props.transparent ? "none" : `linear-gradient(120deg, ${theme.accentLight} 50%, ${theme.accentDarkest} 100%)`, border: props.transparent ? "2px solid " + theme.accentLight : "", ...props.style }} onClick={props.onClick} className={styles.button} aria-label={props.label}>
 						{props.icon ? <Icon className={styles.button_icon} style={{ color: theme.baseHigh }} iconName={props.icon} /> : null}
 						{props.children ? <label className={styles.button_label} style={{ color: theme.baseHigh }}>{props.children}</label> : null}
 					</button>
