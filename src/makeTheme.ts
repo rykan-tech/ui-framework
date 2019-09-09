@@ -1,5 +1,8 @@
 import { Color } from 'csstype';
 
+// @ts-ignore
+import pSBC from './pSBC';
+
 interface ThemeProps {
 	accent: Color,
 	theme: string
