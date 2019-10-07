@@ -30,17 +30,16 @@ const typeStyles = {
 	},
 
 	Base: {
-		fontWeight: 300,
 		fontSize: 16,
 		lineHeight: "20px"
 	},
 
 	Paragraph: {
-		fontWeight: 300
+		fontWeight: 400
 	},
 
 	Text: {
-		fontWeight: 300
+		fontWeight: 400
 	},
 
 	Bold: {
