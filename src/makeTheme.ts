@@ -103,6 +103,13 @@ const makeTheme = function (theme: ThemeProps) {
 				300: "300ms cubic-bezier(0.785, 0.135, 0.150, 0.860)",
 				100: "100ms cubic-bezier(0.785, 0.135, 0.150, 0.860)"
 			},
+			
+			MotionTimings: {
+				accelerate: "cubic-bezier(0.9, 0.1, 1, 0.2)",
+				decelerate: "cubic-bezier(0.1, 0.9, 0.2, 1)",
+				linear: "cubic-bezier(0, 0, 1, 1)",
+				standard: "cubic-bezier(0.8, 0, 0.2, 1)"
+			},
 
 			shadow: "0 3px 15px 0px rgba(0, 0, 0, 0.4), 0 -3px 15px 0px rgba(0, 0, 0, 0.4)"
 		}
@@ -153,6 +160,13 @@ const makeTheme = function (theme: ThemeProps) {
 			transition: {
 				300: "300ms cubic-bezier(0.785, 0.135, 0.150, 0.860)",
 				100: "100ms cubic-bezier(0.785, 0.135, 0.150, 0.860)"
+			},
+
+			MotionTimings: {
+				accelerate: "cubic-bezier(0.9, 0.1, 1, 0.2)",
+				decelerate: "cubic-bezier(0.1, 0.9, 0.2, 1)",
+				linear: "cubic-bezier(0, 0, 1, 1)",
+				standard: "cubic-bezier(0.8, 0, 0.2, 1)"
 			},
 
 			shadow: "0 3px 15px 0px rgba(0, 0, 0, 0.4), 0 -3px 15px 0px rgba(0, 0, 0, 0.4)"

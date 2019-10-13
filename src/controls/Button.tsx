@@ -3,7 +3,7 @@ import * as React from 'react';
 import styles from './styles.css';
 
 import { Icon } from 'office-ui-fabric-react';
-import { MotionTimings } from '@uifabric/fluent-theme';
+import { MotionTimings } from '../MotionTimings';
 
 import ThemeContext from '../ThemeContext';
 

@@ -90,6 +90,12 @@ export {
 	ThemeContext,
 };
 
+import MotionTimings from './MotionTimings';
+
+export {
+	MotionTimings
+};
+
 import {
 	colours,
 	colours_array,
