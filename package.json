@@ -23,7 +23,8 @@
   },
   "dependencies": {
     "@uifabric/fluent-theme": "^7.1.4",
-    "office-ui-fabric-react": "^7.22.1"
+    "@uifabric/icons": "^7.3.0",
+    "office-ui-fabric-react": "^7.48.1"
   },
   "peerDependencies": {
     "prop-types": "^15.5.4",
@@ -32,26 +33,26 @@
   },
   "devDependencies": {
     "@babel/core": "^7.5.5",
-    "@svgr/rollup": "^4.3.2",
+    "@svgr/rollup": "^4.3.3",
     "@types/jest": "^24.0.17",
-    "@types/react": "^16.3.13",
+    "@types/react": "^16.9.5",
     "@types/react-dom": "^16.0.5",
     "babel-core": "^6.26.3",
     "babel-runtime": "^6.26.0",
-    "cross-env": "^5.1.4",
+    "cross-env": "^6.0.3",
     "gh-pages": "^2.1.1",
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
     "react-scripts-ts": "^3.1.0",
-    "rollup": "^1.19.4",
+    "rollup": "^1.23.1",
     "rollup-plugin-babel": "^4.3.3",
     "rollup-plugin-commonjs": "^10.0.2",
     "rollup-plugin-node-resolve": "^5.2.0",
     "rollup-plugin-peer-deps-external": "^2.2.0",
     "rollup-plugin-postcss": "^2.0.3",
-    "rollup-plugin-typescript2": "^0.24.0",
+    "rollup-plugin-typescript2": "^0.24.3",
     "rollup-plugin-url": "^2.2.2",
-    "typescript": "^3.5.3"
+    "typescript": "^3.6.3"
   },
   "files": [
     "dist"

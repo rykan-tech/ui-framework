@@ -3,7 +3,7 @@ import * as React from 'react';
 import styles from './styles.css';
 
 import { Icon } from 'office-ui-fabric-react';
-import { MotionTimings } from '@uifabric/fluent-theme';
+import { MotionTimings } from '../MotionTimings';
 
 import ThemeContext from '../ThemeContext';
 
@@ -13,6 +13,8 @@ const Button: React.FunctionComponent<{
 	label?: string,
 	noShadow?: boolean,
 	onClick?: React.MouseEventHandler,
+	onMouseEnter?: React.MouseEventHandler,
+	onMouseLeave?: React.MouseEventHandler,
 	style?: React.CSSProperties,
 	transparent?: boolean,
 }> = (props) => {
@@ -23,7 +25,7 @@ const Button: React.FunctionComponent<{
 		<ThemeContext.Consumer>
 			{(theme) => {
 				return (
-					<button style={{ transitionTimingFunction: MotionTimings.standard, color: theme.accent, backgroundImage: props.transparent ? "none" : `linear-gradient(to right, ${theme.accentLighter} 50%, ${theme.accentDarkest} 100%)`, border: props.transparent ? "2px solid " + theme.accentLight : "", ...props.style }} onClick={props.onClick} className={styles.button} aria-label={props.label}>
+					<button style={{ transitionTimingFunction: MotionTimings.standard, color: theme.accent, backgroundImage: props.transparent ? "none" : `linear-gradient(120deg, ${theme.accentLight} 50%, ${theme.accentDarkest} 100%)`, border: props.transparent ? "2px solid " + theme.accentLight : "", ...props.style }} onClick={props.onClick} className={styles.button} aria-label={props.label} onMouseEnter={props.onMouseEnter} onMouseLeave={props.onMouseLeave}>
 						{props.icon ? <Icon className={styles.button_icon} style={{ color: theme.baseHigh }} iconName={props.icon} /> : null}
 						{props.children ? <label className={styles.button_label} style={{ color: theme.baseHigh }}>{props.children}</label> : null}
 					</button>

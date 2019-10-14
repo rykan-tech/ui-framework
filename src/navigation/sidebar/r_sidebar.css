@@ -66,10 +66,13 @@
 		left: 0;
 		top: 0;
 		bottom: 0;
-		transform: translateX(-100%);
+		transform: translateX(-200%);
+		z-index: 50;
 	}
 
-	.sidebar_visible {
-		transform: none;
+	.sidebar::backdrop {
+		background: rgba(0, 0, 0, 0.4);
+		backdrop-filter: blur(15px);
+		-webkit-backdrop-filter: blur(15px);
 	}
 }

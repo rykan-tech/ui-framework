@@ -15,6 +15,7 @@
 	min-width: 2em;
 	margin: 0.25em;
 	box-sizing: border-box;
+	text-shadow: 1px 1px 2px #000000;
 	box-shadow: 0 4px 12px #000000;
 	/* filter: drop-shadow(0 4px 8px #000000); */
 	white-space: nowrap;
