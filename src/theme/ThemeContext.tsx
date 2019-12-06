@@ -1,7 +1,7 @@
 import * as React from 'react';
 
 import makeTheme from './makeTheme';
-import { colours } from './colours';
+import { colours } from '../colours';
 
 const ThemeContext = React.createContext(makeTheme({ accent: colours.default_blue, theme: "dark" }));
 

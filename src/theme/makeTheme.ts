@@ -2,6 +2,8 @@ import { Color } from 'csstype';
 
 // @ts-ignore
 import pSBC from './pSBC';
+import MotionTimings from './MotionTimings';
+import { Depths } from './Depths';
 
 interface ThemeProps {
 	accent: Color,
@@ -54,6 +56,55 @@ const makeTheme = function (theme: ThemeProps) {
 		if (h) return "rgb" + (f ? "a(" : "(") + r + "," + g + "," + b + (f ? "," + m(a * 1000) / 1000 : "") + ")";
 		else return "#" + (4294967296 + r * 16777216 + g * 65536 + b * 256 + (f ? m(a * 255) : 0)).toString(16).slice(1, f ? undefined : -2)
 	}
+
+	const theme_output = {
+		accent: theme.accent,
+		background: {
+			//gradient3d6: "linear-gradient(to bottom, rgba(125,126,125,0.6) 0%,rgba(14,14,14,0.6) 100%)",
+			//gradient3d8: "linear-gradient(to bottom, rgba(125,126,125,0.8) 0%,rgba(14,14,14,0.8) 100%)",
+			//gradientDark: "linear-gradient(to bottom, rgba(125,126,125,1) 0%,rgba(14,14,14,1) 100%)",
+			metal: theme.theme === "dark" ? "linear-gradient(to bottom, rgba(69,72,77,1) 0%,rgba(43,43,43,1) 100%)" : "linear-gradient(to bottom, rgba(238,238,238,1) 0%,rgba(204,204,204,1) 100%)",
+			alt_metal: theme.theme === "dark" ? "linear-gradient(to bottom, rgba(238,238,238,1) 0%,rgba(204,204,204,1) 100%)" : "linear-gradient(to bottom, rgba(69,72,77,1) 0%,rgba(43,43,43,1) 100%)",
+			high: theme.theme === "dark" ? "#171717" : "#FFFFFF",
+			mid: theme.theme === "dark" ? "#1F1F1F" : "#FAFAFA",
+			low: theme.theme === "dark" ? "#2B2B2B" : "#E7E7E7",
+		},
+		theme: theme.theme,
+		// Accents
+		accentLow: hexToRGB(theme.accent, 0.4),
+		accentMedium: hexToRGB(theme.accent, 0.6),
+		accentHigh: hexToRGB(theme.accent, 0.7),
+
+		accentDark: hexToRGB(pSBC(-0.10, theme.accent)) || theme.accent,
+		accentDarker: hexToRGB(pSBC(-0.20, theme.accent)) || theme.accent,
+		accentDarkest: hexToRGB(pSBC(-0.30, theme.accent)) || theme.accent,
+
+		accentLight: hexToRGB(pSBC(0.10, theme.accent)) || theme.accent,
+		accentLighter: hexToRGB(pSBC(0.20, theme.accent)) || theme.accent,
+		accentLightest: hexToRGB(pSBC(0.30, theme.accent)) || theme.accent,
+
+		chromeLow: "#171717",
+		chromeMediumLow: "#2B2B2B",
+		chromeMedium: "#1F1F1F",
+		chromeHigh: "#767676",
+
+		baseLow: theme.theme === "dark" ? "rgba(255, 255, 255, 0.2)" : "rgba(0, 0, 0, 0.2)",
+		baseMediumLow: theme.theme === "dark" ? "rgba(255, 255, 255, 0.4)" : "rgba(0, 0, 0, 0.4)",
+		baseMedium: theme.theme === "dark" ? "rgba(255, 255, 255, 0.6)" : "rgba(0, 0, 0, 0.6)",
+		baseMediumHigh: theme.theme === "dark" ? "rgba(255, 255, 255, 0.8)" : "rgba(0, 0, 0, 0.8)",
+		baseHigh: theme.theme === "dark" ? "rgba(255, 255, 255, 0.95)" : "rgba(0, 0, 0, 0.95)",
+
+		altLow: theme.theme === "dark" ? "rgba(0, 0, 0, 0.2)" : "rgba(255, 255, 255, 0.2)",
+		altMediumLow: theme.theme === "dark" ? "rgba(0, 0, 0, 0.4)" : "rgba(255, 255, 255, 0.4)",
+		altMedium: theme.theme === "dark" ? "rgba(0, 0, 0, 0.6)" : "rgba(255, 255, 255, 0.6)",
+		altMediumHigh: theme.theme === "dark" ? "rgba(0, 0, 0, 0.6)" : "rgba(255, 255, 255, 0.8)",
+		altHigh: theme.theme === "dark" ? "rgba(0, 0, 0, 0.6)" : "rgba(255, 255, 255, 0.95)",
+		
+		MotionTimings: MotionTimings,
+		Depths: Depths,
+	};
+
+	return theme_output;
 	
 	if (theme.theme === "light") {
 		return {
