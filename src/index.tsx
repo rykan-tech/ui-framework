@@ -52,8 +52,8 @@ export {
 	ToolbarButton,
 };
 
-import makeTheme from './makeTheme';
-import ThemeContext from './ThemeContext';
+import makeTheme from './theme/makeTheme';
+import ThemeContext from './theme/ThemeContext';
 
 class Theme extends React.Component<{children?: any, className?: string, id?: string, theme: any, style?: React.CSSProperties }> {
 	render() {
@@ -90,7 +90,7 @@ export {
 	ThemeContext,
 };
 
-import MotionTimings from './MotionTimings';
+import MotionTimings from './theme/MotionTimings';
 
 export {
 	MotionTimings

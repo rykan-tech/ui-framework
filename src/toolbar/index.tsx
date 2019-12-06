@@ -2,7 +2,7 @@ import * as React from 'react';
 
 import styles from './r_toolbar.css';
 
-import { Depths } from '@uifabric/fluent-theme';
+import { Depths } from '../theme/Depths';
 
 const Toolbar: React.FunctionComponent<{ children: any, style?: React.CSSProperties, outerStyle?: React.CSSProperties }> = (props) => {
 	return (

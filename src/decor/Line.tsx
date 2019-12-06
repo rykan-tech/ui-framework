@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import ThemeContext from '../ThemeContext';
+import ThemeContext from '../theme/ThemeContext';
 
 const Button: React.FunctionComponent<{ vertical?: boolean, horizontal?: boolean }> = (props) => {
 	return (

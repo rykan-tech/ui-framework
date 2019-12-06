@@ -4,7 +4,7 @@ import { styles as typeStyles } from '../../typography/styles';
 
 import styles from './rwf.css';
 
-import ThemeContext from '../../ThemeContext';
+import ThemeContext from '../../theme/ThemeContext';
 
 const NavItem: React.FunctionComponent<{accent?: boolean, children?: any, link?: string, onClick?: React.MouseEventHandler<HTMLAnchorElement>, id?: string, right?: boolean, style?: React.CSSProperties}> = (props) => {
 	const {

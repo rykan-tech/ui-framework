@@ -3,9 +3,9 @@ import * as React from 'react';
 import styles from './styles.css';
 
 import { Icon } from 'office-ui-fabric-react';
-import { MotionTimings } from '../MotionTimings';
+import { MotionTimings } from '../theme/MotionTimings';
 
-import ThemeContext from '../ThemeContext';
+import ThemeContext from '../theme/ThemeContext';
 
 const Button: React.FunctionComponent<{
 	children?: string,

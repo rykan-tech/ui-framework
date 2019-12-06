@@ -6,7 +6,7 @@ import styles from './r_toolbar.css';
 
 import { Icon } from 'office-ui-fabric-react';
 
-import { Depths } from '@uifabric/fluent-theme';
+import { Depths } from '../theme/Depths';
 
 const showHoverStyles: (e: React.MouseEvent<HTMLButtonElement>) => void = (e) => {
 	e.currentTarget.style.boxShadow = Depths.depth16;
