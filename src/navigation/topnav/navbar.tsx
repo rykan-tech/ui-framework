@@ -21,11 +21,13 @@ export default class Navbar extends React.Component<{ logo?: string, style?: Rea
 					return (
 						<div className={styles.navbar} style={outerStyle}>
 							<div className={styles["navbar-inner"]} style={{ background: theme.altHigh, ...style }}>
-								<div className={styles.toggle} onClick={onClickToggle}>
+								<button className={styles.toggle} onClick={onClickToggle}>
 									<span style={{ display: "inline-flex", margin: "auto", fontFamily: "monospace" }}>&#9776;</span>
+								</button>
+								<img className={styles.rykan} alt="Logo" style={logoStyle} src={logo} aria-hidden />
+								<div className={styles.navitem_list} role="navigation" aria-label="Main Site Navigation">
+									{children}
 								</div>
-								<img className={styles.rykan} alt="Logo" style={logoStyle} src={logo} />
-								{children}
 							</div>
 						</div>
 					)
