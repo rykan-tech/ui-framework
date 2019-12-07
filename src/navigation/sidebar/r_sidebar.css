@@ -2,10 +2,11 @@
 	display: flex;
 	flex-direction: column;
 	box-sizing: border-box;
-	height: 100vh;
-	max-height: 100vh;
+	/* height: 100vh; */
+	/* max-height: 100vh; */
 	overflow-y: auto;
 	flex-shrink: 0;
+	padding-bottom: env(safe-area-inset-bottom);
 }
 
 .menu_button {
