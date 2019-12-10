@@ -97,8 +97,8 @@ const makeTheme = function (theme: ThemeProps) {
 		altLow: theme.theme === "dark" ? "rgba(0, 0, 0, 0.2)" : "rgba(255, 255, 255, 0.2)",
 		altMediumLow: theme.theme === "dark" ? "rgba(0, 0, 0, 0.4)" : "rgba(255, 255, 255, 0.4)",
 		altMedium: theme.theme === "dark" ? "rgba(0, 0, 0, 0.6)" : "rgba(255, 255, 255, 0.6)",
-		altMediumHigh: theme.theme === "dark" ? "rgba(0, 0, 0, 0.6)" : "rgba(255, 255, 255, 0.8)",
-		altHigh: theme.theme === "dark" ? "rgba(0, 0, 0, 0.6)" : "rgba(255, 255, 255, 0.95)",
+		altMediumHigh: theme.theme === "dark" ? "rgba(0, 0, 0, 0.8)" : "rgba(255, 255, 255, 0.8)",
+		altHigh: theme.theme === "dark" ? "rgba(0, 0, 0, 0.95)" : "rgba(255, 255, 255, 0.95)",
 		
 		MotionTimings: MotionTimings,
 		Depths: Depths,
