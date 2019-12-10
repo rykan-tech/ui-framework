@@ -7,12 +7,15 @@
 	overflow-y: auto;
 	flex-shrink: 0;
 	padding-bottom: env(safe-area-inset-bottom);
+	padding-left: env(safe-area-inset-left);
 }
 
 .menu_button {
-	height: 32;
+	height: 32px;
 	display: flex;
+	flex-shrink: 0;
 	appearance: none;
+	-moz-appearance: none;
 	outline: 0;
 	padding: 4px;
 	font-size: 16px;
