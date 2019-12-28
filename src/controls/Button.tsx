@@ -8,7 +8,7 @@ import { MotionTimings } from '../theme/MotionTimings';
 import ThemeContext from '../theme/ThemeContext';
 
 const Button: React.FunctionComponent<{
-	children?: string,
+	children?: any,
 	icon?: string,
 	label?: string,
 	noShadow?: boolean,
