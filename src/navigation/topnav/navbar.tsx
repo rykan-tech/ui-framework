@@ -20,7 +20,7 @@ export default class Navbar extends React.Component<{ logo?: string, style?: Rea
 				{(theme) => {
 					return (
 						<div className={styles.navbar} style={outerStyle}>
-							<div className={styles["navbar-inner"]} style={{ background: theme.altHigh, ...style }}>
+							<div className={styles["navbar-inner"]} style={{ background: CSS.supports('(backdrop-filter: blur(10px)) or (-webkit-backdrop-filter: blur(10px))') ? theme.altMedium : theme.altHigh, ...style }}>
 								<button className={styles.toggle} onClick={onClickToggle}>
 									<span style={{ display: "inline-flex", margin: "auto", fontFamily: "monospace" }}>&#9776;</span>
 								</button>
