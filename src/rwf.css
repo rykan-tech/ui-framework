@@ -83,4 +83,8 @@
 		margin: 0;
 		display: block;
 	}
+
+	.theme {
+		padding-top: 48px;
+	}
 }
