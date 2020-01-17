@@ -51,7 +51,7 @@
     "rollup-plugin-postcss": "^2.0.3",
     "rollup-plugin-typescript2": "^0.25.3",
     "rollup-plugin-url": "^2.2.2",
-    "typescript": "^3.7.4"
+    "typescript": "^3.7.5"
   },
   "files": [
     "dist"
