@@ -23,7 +23,7 @@
   },
   "dependencies": {
     "@uifabric/icons": "^7.3.0",
-    "office-ui-fabric-react": "^7.76.2"
+    "office-ui-fabric-react": "^7.84.0"
   },
   "peerDependencies": {
     "prop-types": "^15.5.4",
