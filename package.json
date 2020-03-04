@@ -22,7 +22,7 @@
     "deploy": "gh-pages -d example/build"
   },
   "dependencies": {
-    "@uifabric/icons": "^7.3.0",
+    "@uifabric/icons": "^7.3.14",
     "office-ui-fabric-react": "^7.76.2"
   },
   "peerDependencies": {
